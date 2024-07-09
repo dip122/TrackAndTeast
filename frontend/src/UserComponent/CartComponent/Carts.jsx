@@ -50,6 +50,9 @@ const Carts = () => {
         }
       )
       if(response && response.data.success){
+
+        const data = localStorage.getItem('user-Data');
+        
         // console.log(response.data.payment.amount);
         // console.log(auth?.user?.firstname);
         var options = {
