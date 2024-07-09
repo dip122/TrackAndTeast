@@ -1,0 +1,8 @@
+.cart-header img {
+    height : 50px;
+    width : 50px;
+}
+.cart-header .header-text{
+    font-family: "Popins",sans-serif;
+    font-weight : 600;
+}

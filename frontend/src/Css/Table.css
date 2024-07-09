@@ -1,0 +1,117 @@
+@import url('../App.css');
+
+.table-section {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+}
+
+.table-section .table-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table-header {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+table {
+    width: 83%;
+    border-collapse: collapse; /* Ensure borders are collapsed */
+}
+
+.special-td span {
+    color: #4B49AC;
+    cursor: pointer;
+}
+
+th {
+    text-align: center;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    background-color: rgb(219, 223, 246);
+    color: var(--bold-text-color);
+    border: 1px solid #ddd; /* Add border to th */
+}
+
+tr {
+    margin-bottom: 10px;
+}
+
+tr:nth-child(2n + 1) {
+    background-color: rgb(234, 234, 234);
+}
+
+tr:nth-child(2n + 2) {
+    background-color: rgb(226, 237, 255);
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    align-items: center;
+    border-right: 2px solid #ddd; /* Add right border to td */
+}
+
+td:last-child {
+    border-right: none; /* Remove right border from last td in each row */
+}
+
+table tbody tr td img {
+    display: flex;
+    justify-content: center;
+    height : 90px;
+    width : 90px;
+    border-radius: 50%;
+}
+
+td .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Make sure the icon container takes full height of td */
+    cursor: pointer;
+}
+@media (max-width: 580px) {
+    .table-section {
+        font-size : 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .table-header {
+        font-size: 14px;
+    }
+    table tbody tr td img  {
+        height : 60px;
+        width : 60px;
+    }
+}
+@media (max-width: 470px) {
+    .table-header {
+        font-size: 12px;
+    }
+    table tbody tr td img  {
+        height : 50px;
+        width : 50px;
+    }
+    .table-section{
+        font-size : 10px;
+    }
+    table {
+        width : 95%;
+    }
+}
+@media(max-width:440px){
+    .table-section{
+        font-size : 8px;
+    }
+}

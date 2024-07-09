@@ -1,0 +1,6 @@
+.contact{
+    background-image : url('../../public/images/background3.jpg');
+    background-size : cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

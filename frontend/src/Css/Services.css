@@ -1,0 +1,78 @@
+.services{
+    background-image: url('../../public/images/background4.avif');
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-attachment: fixed;
+}
+.services .banner{
+    padding : 40px;
+    gap : 22px;
+}
+.services .header{
+    font-size : 20px;
+}
+.services .banner .card{
+    padding : 30px 40px;
+    flex : 1;
+    cursor: pointer;
+}
+.services .banner .card .firstp{
+    font-size : 18px;
+    font-weight : 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.services .banner .card .secondp{
+    font-size : 13px;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+}
+.services .container .banner .card:hover{
+    transition : all 0.3s;
+    box-shadow : 2px 10px 10px -1px rgba(0,0,0,0.17);
+    -webkit-box-shadow : 2px 10px 10px -1px rgba(0,0,0,0.17);
+    cursor: pointer;
+}
+.services .container .banner .card:first-child{
+    background-color: #D1CBCB;
+}
+.services .container .banner .card:nth-child(2){
+    background-color: #8BB6FF;
+}
+.services .container .banner .card:last-child{
+    background-color: #D1CBCB;
+}
+
+.services .container .banner .card svg{
+    font-size : 35px;
+    color : #2d5649;
+}
+.services .container .banner .card .firstp{
+    font-size : 20px;
+    font-weight : 600;
+}
+.services .container .banner .card .secondp{
+    font-size : 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+}
+@media (max-width : 1520px){
+    .services .container{
+        min-width: 100%;
+    }
+}
+@media (max-width : 850px){
+    .services .container .banner{
+        flex-wrap : wrap;
+        justify-content : center;
+    }
+    .services .container .banner .card{
+        width : 385px;
+        height : 320px;
+        flex : none;
+    }
+}
+@media(max-width: 400px){
+    .services .container .banner .card{
+        width : 100%;
+    }
+}
