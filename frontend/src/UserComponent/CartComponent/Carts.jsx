@@ -4,7 +4,7 @@ import { useStorage } from '../../Context/StorageContext'
 import {ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
-import { placeorderapi } from '../../Apis/Apirouter';
+import { placeorderapi, verifyordercallbackurl } from '../../Apis/Apirouter';
 import { useAuth } from '../../Context/Context';
 import { useNavigate } from 'react-router-dom';
 import DeleteIcon from '../../AdminComponent/Icons/DeleteIcon';
@@ -60,7 +60,7 @@ const Carts = () => {
           "description": "Test Transaction",
           "image": "https://example.com/your_logo",
           "order_id": response.data.payment.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-          "callback_url": "http://localhost:2065/api/v1/order/verify-order",
+          "callback_url": `${verifyordercallbackurl}`,
           "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
               "name": auth?.user?.firstname + auth?.user?.lastname, //your customer's name
               "email": auth?.user?.email,

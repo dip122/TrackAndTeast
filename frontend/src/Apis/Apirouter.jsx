@@ -29,3 +29,6 @@ export const deleteratingsapi = `/api/v1/ratings/delete`;
 export const getallratingsapi = `/api/v1/ratings/getallreviews`;
 export const forgetpasswordapi = `/api/v1/auth/forget-password`;
 export const resetpasswordapi = `/api/v1/auth/resetpassword/`;
+
+
+export const verifyordercallbackurl = `/api/v1/order/verify-order`
