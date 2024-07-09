@@ -166,9 +166,9 @@ const verifyordercontroller = async(req,res)=>{
         const expect = crypto.createHmac('sha256',process.env.RAZORPAY_SECRET).update(body_data).digest('hex');
         const isValid = expect === razorpay_signature;
         if(isValid){
-            res.redirect(`${process.env.FRONTEND_URL}/success`);
+            res.redirect(`https://trackandteast.onrender.com/success`);
         }else{
-            res.redirect(`${process.env.FRONTEND_URL}/failed`)
+            res.redirect(`https://trackandteast.onrender.com/failed`)
         }
     }catch(error){
         console.log(error);
