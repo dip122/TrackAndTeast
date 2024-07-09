@@ -32,3 +32,5 @@ export const resetpasswordapi = `/api/v1/auth/resetpassword/`;
 
 
 export const verifyordercallbackurl = `/api/v1/order/verify-order`
+
+export const socketbackendurl = ``

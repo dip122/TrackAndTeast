@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../Css/Track.css'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { getorderbyidapi } from '../../Apis/Apirouter';
+import { getorderbyidapi, socketbackendurl } from '../../Apis/Apirouter';
 import { useAuth } from '../../Context/Context';
 import Empty from '../Empty/Empty';
 import { io } from 'socket.io-client';
@@ -45,7 +45,7 @@ const OrderTrack = () => {
 
     useEffect(()=>{
         if(auth && auth?.user && order?._id){
-            const socket =io("http://localhost:2065",{
+            const socket =io(`${socketbackendurl}`,{
                 withCredentials : true
             });
             if(order){
