@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
         <div className="block md:hidden">
           <button onClick={toggleMenu} className="bg-purple-500 text-center text-white font-semibold py-2 px-5 hover:bg-purple-600 rounded-full">
-            <div className="Menu">{isOpenMenu ? 'open' : 'closed'}</div>
+            <div className="Menu">{isOpenMenu ? 'close' : 'open'}</div>
           </button>
         </div>
       </nav>

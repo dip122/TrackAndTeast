@@ -31,7 +31,7 @@ const placeordercontroller = async(req,res)=>{
 
         const ordersave = new ordermodel({
             userid : id,
-            items : items,
+            items : JSON.parse(items),
             amount : amounts,
             contact : contact,
             address : address,
@@ -59,7 +59,7 @@ const placeordercontroller = async(req,res)=>{
 
 const listorderscontroller = async(req,res)=>{//admin orders 
     try{
-        const orders = await ordermodel.find({});
+        const orders = await ordermodel.find({}).populate("userid")
         return res.status(200).send({
             success : true,
             message : "Successfully we have got all the orders",
@@ -79,7 +79,7 @@ const orderbyuseridcontroller = async(req,res)=>{//user orders
     try{
         const id = req.user.id;
         // console.log(id);
-        const orders = await ordermodel.find({userid : id});
+        const orders = await ordermodel.find({userid : id}).populate("userid");
         return res.status(200).send({
             success : true,
             message : "Successfully we have got all the orders of user",

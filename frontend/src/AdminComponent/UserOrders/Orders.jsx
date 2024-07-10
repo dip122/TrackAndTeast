@@ -81,7 +81,7 @@ const Orders = () => {
     <>
     <Navbar/>
     {(!(auth && auth?.user) || orders.length === 0) ? (<Loading/>) : (
-    <section className = "table-section" style={{paddingTop : "70px"}}>
+    <section className = "table-section relative" style={{paddingTop : "70px"}}>
       <h3 className = "table-header">Admin Orders</h3>
       <div className = "table-container">
         <table>
@@ -103,7 +103,7 @@ const Orders = () => {
                     <td>{order?.contact}</td>
                     <td>
                         <Link className = "text-blue-500" onClick ={tooglemodal}> Details</Link>
-                        {openmodal === true ? <DetailsModal isopen={openmodal} element = {order} onClose={tooglemodal}/> : ''}
+                        {openmodal === true ? <DetailsModal isopen={openmodal} element = {order} togglemodal={tooglemodal}/> : ''}
                     </td>
                     <td>
                       <select value = {order?.status} onChange = {(e)=>handleStatusChange(e,order?._id)}>

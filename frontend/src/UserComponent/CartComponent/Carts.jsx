@@ -21,8 +21,20 @@ const Carts = () => {
     // console.log(cartItems);
   },[]);
 
+  const MakeValidation = ()=>{
+    if(!address || address === ""){
+      toast.error("Please Give Your Address");
+      return false;
+    }else if(contact === "" || contact.length!==10){
+      toast.error("Contact should be of 10 digits");
+      return false;
+    }
+    return true;
+  }
+
   const handleSubmit = async(e)=>{
     e.preventDefault();
+    if(!MakeValidation())return false;
     let array = [];
     const amount = Totalamount();
     for(const Items in cartItems){
@@ -36,7 +48,7 @@ const Carts = () => {
     formData.append('amounts',amount);
     formData.append('address',address);
     formData.append('contact',contact);
-    console.log(amount);
+    // console.log(amount);
     try{
       const response = await toast.promise(
         axios.post(placeorderapi,formData,{
@@ -51,8 +63,11 @@ const Carts = () => {
       )
       if(response && response.data.success){
 
-        const data = localStorage.getItem('user-Data');
-        
+        const data = JSON.parse(localStorage.getItem('user-Data'));
+        // console.log(data);
+        data.user.cartData = {}
+        await localStorage.removeItem('user-Data')
+        await localStorage.setItem('user-Data',JSON.stringify(data));
         // console.log(response.data.payment.amount);
         // console.log(auth?.user?.firstname);
         var options = {

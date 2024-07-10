@@ -121,7 +121,7 @@ const SingleProduct = () => {
   }
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <div className = "min-h-screen flex justify-center items-center p-2 font-semibold text-center">Loading...</div>;
   }
   let averageRating = 0;
   if(product?.ratings && product?.count){

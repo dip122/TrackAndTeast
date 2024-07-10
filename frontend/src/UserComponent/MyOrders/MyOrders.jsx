@@ -6,15 +6,22 @@ import { useAuth } from '../../Context/Context';
 import axios from 'axios';
 import { userorderapi } from '../../Apis/Apirouter';
 import convert from './Convert';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../UserNavbar/Navbar'
+import DetailsModal from '../../AdminComponent/DetailsModal/DetailsModal';
 // import userorderapi from '../../Apis/Apirouter'
 
 const MyOrders = () => {
 
   const [orders ,setOrders] = useState([]);
   const [auth ,setAuth] = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [isopen,setisopen] = useState(false)
+
+  const togglemodal = ()=>{
+    setisopen(!isopen);
+    // console.log(isopen);
+  }
 
   useEffect(()=>{
     const GetUserOrder = async()=>{
@@ -23,7 +30,7 @@ const MyOrders = () => {
         const response = await axios.get(userorderapi);
         if(response && response.data.success){
           setOrders(response.data.orders);
-          console.log(response.data.orders);
+          // console.log(response.data.orders);
         }else{
           setOrders([]);
         }
@@ -52,7 +59,7 @@ const MyOrders = () => {
         <table>
           <thead>
             <tr>
-              <th>id</th>
+              <th>Details</th>
               <th>Price</th>
               <th>Date</th>
               <th>Track</th>
@@ -63,7 +70,10 @@ const MyOrders = () => {
               const {formattedDate, formattedTime} = convert(order?.createdAt);
               return (
                 <tr key = {index}>
-                    <td className = "text-left">{order?._id}</td>
+                    <td className = "text-left">
+                      <Link className = "text-blue-600" onClick = {togglemodal}>Details</Link>
+                      {isopen === true ? <DetailsModal isopen={isopen} element={order} togglemodal = {togglemodal}/> : ''}
+                    </td>
                     <td className = "text-left">{order?.amount}</td>
                     <td className = "text-left"> Date :  {formattedDate}<br/> Time : {formattedTime}</td>
                     <td className = "text-left"><span className = "text-blue-500 cursor-pointer" onClick={()=>handleClick(order?._id)}>Track</span></td>

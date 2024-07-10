@@ -65,7 +65,7 @@ const FoodList = ({element}) => {
                         )
                     })
                 ) : (
-                    <Empty/>
+                    <div className = "flex justify-center items-center text-center">Please select Category....</div>
                 )}
             </div>
         </section>

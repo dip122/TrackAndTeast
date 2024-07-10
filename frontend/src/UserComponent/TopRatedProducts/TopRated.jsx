@@ -12,6 +12,10 @@ const TopRated = () => {
         navigate(`/single-product/${id}`);
     }
 
+    if(!topRatedFoods){
+        <div className = "flex justify-center items-center font-semibold p-2">Loading...</div>
+    }
+
   return (
     <section className ="menu container mx-auto py-8">
         <h1 className = "text-xl font-bold mb-14 text-center Food-header">Top Rated Foods</h1>

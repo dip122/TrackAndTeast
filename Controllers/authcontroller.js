@@ -94,7 +94,6 @@ const logincontroller = async(req,res)=>{
                 message : "Don't have an account"
             })
         }
-        console.log(user);
         const hashedpassword = user.password;
         const isMatch = comparepassword(password,hashedpassword);
         if(!isMatch){
