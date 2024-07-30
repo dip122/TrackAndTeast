@@ -15,7 +15,7 @@ export const SingleFoodapi = `/api/v1/menu/Food/`;
 export const topRatedFoodsapi = `/api/v1/menu/toprated`;
 export const addToCartapi = `/api/v1/cart/add-to-cart`;
 export const removecartapi = `/api/v1/cart/remove-from-cart`;
-// export const getcartapi = `/api/v1/cart/get-cart`;
+
 export const changepasswordapi = `/api/v1/auth/change-address`;
 export const changeaddressapi = `/api/v1/auth/change-address`;
 export const placeorderapi = `/api/v1/order/place-order`;
@@ -29,8 +29,12 @@ export const deleteratingsapi = `/api/v1/ratings/delete`;
 export const getallratingsapi = `/api/v1/ratings/getallreviews`;
 export const forgetpasswordapi = `/api/v1/auth/forget-password`;
 export const resetpasswordapi = `/api/v1/auth/resetpassword/`;
-
-
 export const verifyordercallbackurl = `/api/v1/order/verify-order`
 
+
 export const socketbackendurl = ``
+
+
+
+
+// export const getcartapi = `/api/v1/cart/get-cart`;

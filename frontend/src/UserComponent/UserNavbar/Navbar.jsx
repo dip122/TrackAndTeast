@@ -75,17 +75,7 @@ const Navbar = () => {
                         </button>
                     </div>
                     <div className = "flex-grow" onClick = {handleLogout}>
-                        <button className="bg-purple-500 text-center text-white font-semibold rounded-full py-2 px-5 hover:bg-purple-600 text-base">Logout</button>
-                    </div>
-                    <div className = "relative">
-                        <button
-                         id = "dropdown-user-menu"
-                         type = "button"
-                         className = "p-1.5 hover:bg-neutral-200 rounded-full"
-                         onClick = {toggleDropDownMenu}>
-                            <FaRegUser className="h-8 w-8 rounded-full text-neutral-800"/>
-                        </button>
-                        {isMenuDropDownOpen && <DropdownMenu id ="dropdown-menu"/> }
+                        <button className="bg-purple-500 text-center text-white font-semibold rounded-full py-2 px-5 hover:bg-purple-600 text-base hover:outline-none">Logout</button>
                     </div>
                 </>
             ) : (
