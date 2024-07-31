@@ -210,7 +210,7 @@ const forgetpasswordcontroller = async(req,res)=>{
         }
         // console.log(email);
         const token = jwt.sign({id : user._id},process.env.SECRET_KEY, {expiresIn : "10m"});
-        const link = `${process.env.FRONTEND_URL}/resetpassword/${token}`;
+        const link = `https://trackandteast.onrender.com/resetpassword/${token}`;
         const info = await transporter.sendMail({
             from : process.env.EMAIL,
             to : email,
