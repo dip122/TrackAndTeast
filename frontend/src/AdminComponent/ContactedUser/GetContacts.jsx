@@ -63,7 +63,7 @@ const GetContacts = () => {
         <Loading/>
     ) : (
         <section className = "table-section" style={{paddingTop : "70px"}}>
-            <h3 className = "table-header">Foods</h3>
+            <h3 className = "table-header">Contacts</h3>
             <div className = "table-container">
                 <table>
                     <thead>

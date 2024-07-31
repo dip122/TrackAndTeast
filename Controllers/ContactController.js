@@ -4,6 +4,7 @@ const usermodel = require('../Models/Usermodel');
 const contactUsController = async(req,res)=>{
     try{
         const {name,email,description} = req.body;
+        // console.log(req.body);
         if(!name || !email || !description){
             return res.status(200).send({success : false , message : "Fill the fields"});
         }

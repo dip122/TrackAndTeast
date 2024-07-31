@@ -30,6 +30,7 @@ const Contact = () => {
             formData.append('name',name);
             formData.append('email',email);
             formData.append('description',description);
+            // console.log(formData);
             const response = await toast.promise(
                 axios.post(postcontactapi,formData,{
                     withCredentials : true,
