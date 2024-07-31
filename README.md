@@ -94,3 +94,12 @@ For any issues or inquiries, please contact [your-email@example.com].
 ---
 
 This README provides a brief overview of the Tract and Teast application, its features, and setup instructions. For more detailed information, please refer to the project documentation.
+
+## Admin Panel View
+
+
+<img width="948" alt="pic12" src="https://github.com/user-attachments/assets/293c99a5-b53c-4260-8836-72c8fff8ec1d"><img width="939" alt="pic14" src="https://github.com/user-attachments/assets/f759e37a-827f-4e88-9309-97d8ae81236f">
+<img width="940" alt="pic13" src="https://github.com/user-attachments/assets/68c2c1f1-c8ac-4e87-8289-6e016ad2482d">
+<img width="816" alt="pic15" src="https://github.com/user-attachments/assets/c80b4a7e-1ad5-41d4-862f-df18f3c2a647">
+
+
