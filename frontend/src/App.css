@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.register-text{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.register-account{
+  font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight : 500;
+}
+.register-welcome{
+  font-family :'Courier New', Courier, monospace;
+  font-weight : 600;
+}
+.register-desc{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight : 500;
+}
+.addFood {
+  font-size : 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight : 600;
+  margin-top: 20px;
+}
+:root {
+  --light-blue : #e9f1fa;
+  --white : #fff;
+  --bold-text-color : #1e375a;
+  --body-color: #E4E9F7;
+  --sidebar-color: #FFF;
+  --primary-color: #695CFE;
+  --primary-color-light: #F6F5FF;
+  --toggle-color: #DDD;
+  --text-color: #707070;
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
+
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color : var(--light-blue);
+}
+
+li {
+  list-style : none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media ( max-width : 768px){
+  html {
+    font-size : 80%
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+

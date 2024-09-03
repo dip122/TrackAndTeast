@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.Navbar-header{
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.navbar-acc ul li a{
+    font-weight : 500;
+    font-size : 17px;
+    font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+@media(max-width:767px){
+    .button-portion{
+        display : hidden;
+    }
+}

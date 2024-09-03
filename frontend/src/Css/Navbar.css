@@ -1,0 +1,43 @@
+.navbar-section .close-navbar .navbar{
+    left : 250px;
+    width : calc(100% - 250px);
+    transition : all 0.3s ease-in-out;
+    z-index : 1000;
+    position : fixed;
+    color : #fff;
+    padding : 15px 20px;
+    font-size : 25px;
+    background-color : #4070f4;
+    cursor: pointer;
+    /* width : 100%; */
+}
+.navbar-section {
+    display : flex;
+    /* position: fixed; */
+
+}
+.navbar-section .open-navbar .navbar{
+    left : 0;
+    background-color : red;
+    width : 100%;
+    transition : all 0.3s ease;
+    z-index : 1000;
+    position : fixed;
+    color : #fff;
+    padding : 15px 20px;
+    font-size : 25px;
+    background-color : #4070f4;
+    cursor: pointer;
+    width : 100%;
+}
+.navbar #sidebar-close{
+    left : 0;
+    width : 100%;
+}
+
+@media(max-width : 550px){
+    .navbar-section .close-navbar .navbar{
+        left : 200px;
+        width : calc(100% - 200px);
+    }
+}

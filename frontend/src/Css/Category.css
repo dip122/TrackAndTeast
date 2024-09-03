@@ -1,0 +1,43 @@
+.category-list {
+    text-align: center;
+    padding: 20px;
+    height : 40vh;
+}
+
+.category-list h1 {
+    font-size: 1.8rem;
+    font-weight : 600;
+    font-family: "Popins" sans-serif;
+    margin-bottom: 10px;
+}
+
+.category-list .category-explore {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight : 100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.explore-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.explore-category div {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore-category .notactive :hover {
+    background-color: #0056b3;
+}
+.explore-category .active{
+    background-color : orange;
+}
